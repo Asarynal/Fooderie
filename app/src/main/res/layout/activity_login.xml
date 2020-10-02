@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.LoginActivity"
+    android:id="@+id/rlRoot"
+    >
+    <ImageView
+        android:id="@+id/imgLogo"
+        android:layout_height="160dp"
+        android:layout_width="160dp"
+        android:src="@drawable/logo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:contentDescription="@string/logo"
+        />
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tiMobile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/mobile_number"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_below="@id/imgLogo"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        app:startIconDrawable="@drawable/ic_mobile"
+        app:endIconMode="clear_text"
+        app:prefixText="@string/country_code"
+
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tiEtMobile"
+            android:maxLines="1"
+            android:maxLength="10"
+            android:inputType="phone"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tiPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/password"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_below="@id/tiMobile"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="20dp"
+        app:startIconDrawable="@drawable/ic_password"
+        app:endIconMode="password_toggle"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tiEtPassword"
+            android:maxLines="1"
+            android:inputType="textPassword"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+    <Button
+        android:id="@+id/btnLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:text="@string/login"
+        android:layout_below="@id/tiPassword"
+        android:textAllCaps="false"
+        android:textStyle="bold"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtForgotPassword"
+        android:text="@string/forgot_password"
+        android:layout_below="@id/btnLogin"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/white_high"
+        android:padding="15dp"
+        android:textSize="15sp"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtSignupReq"
+        android:layout_alignParentBottom="true"
+        android:padding="15dp"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/white_high"
+        android:text="@string/signup_req"
+        android:textSize="15sp"
+        android:layout_margin="10dp"
+        />
+
+
+</RelativeLayout>

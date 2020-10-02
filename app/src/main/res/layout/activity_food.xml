@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".activity.FoodActivity">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar"
+        />
+
+    <TextView
+        android:layout_below="@+id/toolbar"
+        android:id="@+id/txtChoose"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/choose_food"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:padding="10dp"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="?attr/colorOnBackground"
+        android:gravity="start"/>
+
+    <View
+        android:id="@+id/line"
+        android:layout_below="@+id/txtChoose"
+        android:layout_height="1dp"
+        android:layout_width="match_parent"
+        android:background="@android:color/darker_gray"/>
+
+
+
+
+
+    <RelativeLayout
+        android:id="@+id/rlProgress"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="invisible">
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/line"
+        android:weightSum="10"
+        android:orientation="vertical"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="10"
+            android:visibility="visible"
+            android:id="@+id/rlMenu"
+
+            >
+
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvMenu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0"
+            android:id="@+id/rlButton"
+            >
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnCart"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:text="@string/proceed_to_cart"
+                android:textStyle="bold"
+                android:visibility="visible"
+                />
+
+
+        </RelativeLayout>
+
+
+
+    </LinearLayout>
+
+
+
+
+
+
+
+</RelativeLayout>

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/restaurantCard"
+    android:layout_margin="8dp"
+    android:focusable="true"
+    android:clickable="true"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <ImageView
+            android:id="@+id/imgThumbnail"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="8dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/logo"
+            android:contentDescription="@string/thumbnail" />
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="12dp">
+        <RelativeLayout
+            android:id="@+id/rlContainerMain"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+
+            >
+            <TextView
+                android:id="@+id/txtName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toStartOf="@+id/btnFav"
+                android:padding="4dp"
+                android:text="@string/restaurant_name"
+                android:textAppearance="?android:textAppearanceLarge"
+                android:textStyle="bold"
+                android:textColor="?attr/colorOnSurface"/>
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnFav"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                style="@style/Widget.MaterialComponents.Button.TextButton.Icon"
+                app:icon = "@drawable/ic_favourites_button_active"
+                app:iconTint = "#D32F2F"
+                android:layout_alignParentEnd="true"
+                android:src="@drawable/ic_favourites_button_active"
+                app:rippleColor = "#1FD32F2F"
+                />
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rlContainerMain"
+            android:layout_alignParentBottom="true">
+            <TextView
+                android:id="@+id/txtCostIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="4dp"
+                android:paddingBottom="4dp"
+                android:paddingStart="4dp"
+                android:text="@string/rupee"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:textColor="@color/cost"
+                />
+            <TextView
+                android:id="@+id/txtCost"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/txtCostIcon"
+                android:layout_marginEnd="8dp"
+                android:paddingEnd="4dp"
+                android:paddingTop="7dp"
+                android:paddingStart="2dp"
+                android:paddingBottom="4dp"
+                android:text="@string/cost_per_person"
+                android:textColor="@color/cost"
+                android:textSize="15sp"
+                />
+            <TextView
+                android:id="@+id/txtRating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="2dp"
+                android:padding="8dp"
+                android:text="@string/ratings"
+                android:textColor="#fff176"
+                app:drawableLeftCompat="@drawable/ic_ratings" />
+
+        </RelativeLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>
